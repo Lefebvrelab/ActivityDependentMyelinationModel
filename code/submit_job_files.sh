@@ -1,0 +1,14 @@
+
+
+sbatch Fig5__Epsilon0p0_job.sh
+sbatch Fig5__Epsilon0p1_job.sh
+sbatch Fig5__Epsilon0p2_job.sh
+
+sbatch Fig6__Kuramoto_InsultVsEpsilon_job.sh
+sbatch Fig6__Kuramoto_e0p0_a0p001_damage_job.sh
+sbatch Fig6__Kuramoto_e0p2_a0p001_damage_job.sh
+
+sbatch Fig7__Epsilon0p2_sr0p0_job.sh
+sbatch Fig7__Epsilon0p2_sr0p5_job.sh
+sbatch Fig7__Epsilon0p2_sr1p0_job.sh
+
