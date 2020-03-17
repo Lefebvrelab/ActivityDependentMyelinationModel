@@ -111,77 +111,72 @@ int main()
 srand((unsigned)time(NULL));//CPU time reader call - for random seeds
 
 		
-			cout<<"Attention: Phase shuffle"<<endl;
+  cout<<"Attention: Phase shuffle"<<endl;
 
 		
-			cout<<"Importing Weights..."<<endl;
-		    ifstream pfile("../data/Weights96.txt"); 
-		     for (int i = 0 ; i < N ; i++) 
-		     { 
-		        for (int j = 0 ; j < N ; j++) 
-		        { 
-		            pfile>>W_temp[i][j];
-		            //cout<<W_temp[i][j]<<endl;            
-		        } 
-		     } 
-		     
-		     
-		      for (int i=0;i<N;i++)
-				 {
-				 	for (int j=0;j<N;j++)
-				 	{
-												
-						W[i][j] = Heaviside(W_temp[i][j]);
-				 	    
-				
-				 	}
-				 }
-				 for (int i=0;i<N;i++)
-				{
-							for (int j=0;j<N;j++)
-							{
-										long d=rand(); 
-										long seed3= (long) 89*i+454+j+25*i*+50*i*d+4*234;
-										if(ran2(&seed3)<Damage)
-										{
-										        	
-										        	W_damage[i][j]=0;
-										}
-										else
-										{
-												    W_damage[i][j]=W[i][j];
-										}
-											
-							}
-				}
-				 
-				 
-			 ifstream sfile("../data/Lengths96.txt"); 
-			 double max_l=0;
-		     for (int k = 0 ; k < N ; k++) 
-		     { 
-		        for (int j = 0 ; j < N ; j++) 
-		        { 
-		            sfile>>L[k][j];
-					 if(L[k][j]>max_l)
-					 {
-					 	max_l=L[k][j];
-					 }
-		       
-			    } 
-		     } 
-		     
-		     for (int k = 0 ; k < N ; k++) 
-		     { 
-		        for (int j = 0 ; j < N ; j++) 
-		        { 
-		            
-					 Gamma[k][j]=0.01*L[k][j]/max_l;
-			    } 
-		     } 
-		
-				//initialization of network structure + delays
-				for (int i=0;i<N;i++)
+  cout<<"Importing Weights..."<<endl;
+  ifstream pfile("../data/Weights96.txt"); 
+  for (int i = 0 ; i < N ; i++) 
+    { 
+    for (int j = 0 ; j < N ; j++) 
+      { 
+      pfile>>W_temp[i][j];
+      //cout<<W_temp[i][j]<<endl;            
+      } 
+    }
+  for (int i=0;i<N;i++)
+    {
+    for (int j=0;j<N;j++)
+      {						
+      W[i][j] = Heaviside(W_temp[i][j]);				 	    
+      }
+    }
+  for (int i=0;i<N;i++)
+    {
+    for (int j=0;j<N;j++)
+      {
+      long d=rand(); 
+      //long seed3= (long) 89*i+454+j+25*i*+50*i*d+4*234;
+      long seed3= (long) 89*i+454+j+25*i+50*i*d+4*234;
+      //long randnum=ran2(&seed3);
+      //cout<< "randnum=" << randnum << endl;
+      if(ran2(&seed3)<Damage) // I THINK THIS IS THE BAD LINE
+      //if (randnum<Damage)
+        {				        	
+        W_damage[i][j]=0;
+      	}
+      else
+        {
+        W_damage[i][j]=W[i][j];
+      	}			
+      }
+    //cout<<"Up to here..."<<endl; 	     		     
+    }
+  cout<<"Importing Lengths..."<<endl;				 
+  ifstream sfile("../data/Lengths96.txt"); 
+  double max_l=0;
+  for (int k = 0 ; k < N ; k++) 
+    { 
+    for (int j = 0 ; j < N ; j++) 
+      { 
+      sfile>>L[k][j];
+      if(L[k][j]>max_l)
+        {
+  	max_l=L[k][j];
+        }	       
+      } 
+    } 	     
+  for (int k = 0 ; k < N ; k++) 
+    { 
+    for (int j = 0 ; j < N ; j++) 
+      { 		            
+      Gamma[k][j]=0.01*L[k][j]/max_l;
+      } 
+    } 		
+
+//initialization of network structure + delays
+
+for (int i=0;i<N;i++)
 				{
 					for (int j=0;j<N;j++)
 					{	

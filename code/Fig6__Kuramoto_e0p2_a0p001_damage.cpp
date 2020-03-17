@@ -141,7 +141,8 @@ srand((unsigned)time(NULL));//CPU time reader call - for random seeds
 							for (int j=0;j<N;j++)
 							{
 										long d=rand(); 
-										long seed3= (long) 89*i+454+j+25*i*+50*i*d+4*234;
+										//long seed3= (long) 89*i+454+j+25*i*+50*i*d+4*234;
+										long seed3= (long) 89*i+454+j+25*i+50*i*d+4*234;
 										if(ran2(&seed3)<Damage)
 										{
 										        	
