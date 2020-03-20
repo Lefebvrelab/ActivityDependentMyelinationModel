@@ -420,7 +420,7 @@ srand((unsigned)time(NULL));//CPU time reader call - for random seeds
           ofstream outfile; 
           
           
-        	outfile.open("Kuramoto  - OP vs G and OMEGA vs OP 0.0.txt", ios::out);
+        	outfile.open("../data/sim_results/Fig5__Epsilon0p0__OPvsGandOMEGAvsOP0p0.txt", ios::out);
 		
 	
 				for (int q1=0;q1<Q;q1++)
