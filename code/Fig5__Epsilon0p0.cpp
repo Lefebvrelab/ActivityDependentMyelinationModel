@@ -139,7 +139,7 @@ srand((unsigned)time(NULL));//CPU time reader call - for random seeds
 
 		
   cout<<"Importing Weights..."<<endl;
-  ifstream pfile("../data/Weights96.txt"); 
+  ifstream pfile("../data/connectivity/Weights96.txt"); 
   for (int i = 0 ; i < N ; i++) 
     { 
     for (int j = 0 ; j < N ; j++) 
@@ -155,7 +155,7 @@ srand((unsigned)time(NULL));//CPU time reader call - for random seeds
        W_o[i][j] = Heaviside(W_temp[i][j]);			 	  
       }				
     }
-  ifstream sfile("../data/Lengths96.txt"); 
+  ifstream sfile("../data/connectivity/Lengths96.txt"); 
   double max_l=0;
   for (int k = 0 ; k < N ; k++) 
     { 
