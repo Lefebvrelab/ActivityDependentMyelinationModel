@@ -296,10 +296,43 @@ for (int q1=0;q1<Q;q1++)
 									for (int j=0;j<N;j++)
 									{
 										long d=rand(); 
-                                                                                //long seed3=d;
 										//long seed3= (long) 89*i+454*q1+j+t+q2*87+25*i*trials+50*i*d+4*q2*trials*234;
-										 //if(ran2(&seed3)<INSULT[q2])
-                                                                                if (d<INSULT[q2])
+						//				long seed3= (long) 89*i+454*q1+j+t+q2*87+25*i*trials+50*i;
+//long seed3= (long) 89*i+454*q1+j+t+q2*87+25*i*trials+50*i+4*q2*trials*234;
+
+
+long seed3=d;
+
+
+//long seed3= d*89;
+
+
+
+//long seed3= 89*i+454*q1+j+t+q2*87+25*i*trials+50*i*d+4*q2*trials*234;
+
+
+//seed3=d;
+//long seed3=rand()*d
+//*d+4*q2*trials*234;
+//long seed3=47;
+//long seed3=47;
+//long seed3=488099578046;
+//long seed3=8363748319936;
+//long seed3 = 89*i+454+j+25*i+50*i*d+4*234;
+cout<<"d"<<endl;
+cout<<d<<endl;
+cout<<"Seed:"<<endl;
+cout<<seed3<<endl;										
+//cout<<"Up to here 4d..."<<endl;
+//long rand_num=ran2(&seed3);
+long rand_num=ran2(&seed3);
+
+//long rand_num=5;
+cout<<"Rand num: "<<endl;
+cout<<rand_num<<endl;
+if(rand_num<INSULT[q2])
+// if(ran2(&seed3)<INSULT[q2])
+cout<<"Up to here 4b..."<<endl;
 										        {
 										        	
 										        	W[i][j]=0;
@@ -307,7 +340,8 @@ for (int q1=0;q1<Q;q1++)
 											
 									}
 								}
-								
+							
+cout<<"Up to here 4c..."<<endl;	
 											 		for (int i=0;i<N;i++)
 											   		{
 											   			long d=rand(); 
@@ -352,8 +386,9 @@ for (int q1=0;q1<Q;q1++)
 										    tau[i][j] = (int) floor(delay[i][j]);
 				}
 			}
+//cout<<"Up to here 2..."<<endl;
 			}// tloop
-								
+//cout<<"Up to here 1..."<<endl;						
 							double mean_r=0;
 							for (int t=3*T/4;t<T;t++)
 							{
@@ -443,7 +478,7 @@ for (int q1=0;q1<Q;q1++)
           
           
           
-        	outfile.open("../data/sim_results/Fig6__Kuramoto_InsultVsEpsilon__OPvsINSULTvsEPSILON.txt", ios::out);
+        	outfile.open("Kuramoto  - OP vs  INSULT vs EPSILON.txt", ios::out);
 		
 	
 				for (int q1=0;q1<Q;q1++)

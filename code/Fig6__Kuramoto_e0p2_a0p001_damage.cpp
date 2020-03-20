@@ -406,7 +406,7 @@ for (int time_loops=0;time_loops<T-T_window;time_loops++)
 			
 		ofstream outfile; 
       
-        outfile.open("Kuramoto - Sub-Sampled Dynamics.txt", ios::out);
+        outfile.open("..data/sim_results/Fig6__Kuramoto_e0p2_a0p001_damage__SubSampledDynamics.txt", ios::out);
          for(int t=0;t<(int)T/t_sampling;t++)
          {
        			
@@ -417,7 +417,7 @@ for (int time_loops=0;time_loops<T-T_window;time_loops++)
         outfile.close();  
        
 		
-		  outfile.open("Kuramoto - Sub-Sampled Order Paramater PLI.txt", ios::out);
+		  outfile.open("../data/sim_results/Fig6__Kuramoto_e0p2_a0p001_damage__SubSampledOrderParamaterPLI.txt", ios::out);
          for(int t=0;t<(int)T/t_sampling;t++)
          {
        			
@@ -427,7 +427,7 @@ for (int time_loops=0;time_loops<T-T_window;time_loops++)
          } 
         outfile.close();  
  
-        outfile.open("Kuramoto - Sub-Sampled Conduction Speeds.txt", ios::out);
+        outfile.open("../data/sim_results/Fig6__Kuramoto_e0p2_a0p001_damage__SubSampledConductionSpeeds.txt", ios::out);
          for(int t=0;t<(int)(T)/t_sampling;t++)
          {
        			
@@ -436,7 +436,7 @@ for (int time_loops=0;time_loops<T-T_window;time_loops++)
          } 
         outfile.close();  
         
-         outfile.open("Kuramoto - Sub-Sampled Conduction Delays.txt", ios::out);
+         outfile.open("../data/sim_results/Fig6__Kuramoto_e0p2_a0p001_damage__SubSampledConductionDelays.txt", ios::out);
          for(int t=0;t<(int)T/t_sampling;t++)
          {
        			
@@ -448,7 +448,7 @@ for (int time_loops=0;time_loops<T-T_window;time_loops++)
         
      
         
-          outfile.open("Kuramoto - Conduction speed matrix.txt", ios::out);
+          outfile.open("../data/sim_results/Fig6__Kuramoto_e0p2_a0p001_damage__ConductionSpeedMatrix.txt", ios::out);
           for(int i=0;i<N;i++)
          {
        		for (int j=0;j<N;j++)
@@ -458,7 +458,7 @@ for (int time_loops=0;time_loops<T-T_window;time_loops++)
          } 
         outfile.close();  
         
-        outfile.open("Kuramoto - metabolic drag matrix.txt", ios::out);
+        outfile.open("../data/sim_results/Fig6__Kuramoto_e0p2_a0p001_damage__MetabolicDragMatrix.txt", ios::out);
           for(int i=0;i<N;i++)
          {
        		for (int j=0;j<N;j++)
@@ -468,7 +468,7 @@ for (int time_loops=0;time_loops<T-T_window;time_loops++)
          } 
         outfile.close();             
         
-         outfile.open("Kuramoto - connectivity matrix.txt", ios::out);
+         outfile.open("../data/sim_results/Fig6__Kuramoto_e0p2_a0p001_damage__ConnectivityMatrix.txt", ios::out);
           for(int i=0;i<N;i++)
          {
        		for (int j=0;j<N;j++)
@@ -478,7 +478,7 @@ for (int time_loops=0;time_loops<T-T_window;time_loops++)
          } 
         outfile.close();   
 		
-		  outfile.open("Kuramoto - lenght matrix.txt", ios::out);
+		  outfile.open("../data/sim_results/Fig6__Kuramoto_e0p2_a0p001_damage__LengthsMatrix.txt", ios::out);
           for(int i=0;i<N;i++)
          {
        		for (int j=0;j<N;j++)
@@ -489,7 +489,7 @@ for (int time_loops=0;time_loops<T-T_window;time_loops++)
         outfile.close();            
         
         
-		  outfile.open("Kuramoto - Delays matrix.txt", ios::out);
+		  outfile.open("../data/sim_results/Fig6__Kuramoto_e0p2_a0p001_damage__DelaysMatrix.txt", ios::out);
           for(int i=0;i<N;i++)
          {
        		for (int j=0;j<N;j++)
