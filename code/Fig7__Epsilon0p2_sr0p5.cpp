@@ -440,7 +440,7 @@ for (int q1=0;q1<Q;q1++)
           ofstream outfile; 
           
           
-        	outfile.open("Kuramoto  - OP vs G and OMEGA vs OP 0.2.txt", ios::out);
+        	outfile.open("../data/sim_results/Fig7__Epsilon0p2_sr0p5__OPvsGandOMEGAvsOP0.2.txt", ios::out);
 		
 	
 				for (int q1=0;q1<Q;q1++)
