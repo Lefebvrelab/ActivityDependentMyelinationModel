@@ -135,7 +135,7 @@ int main()
 srand((unsigned)time(NULL));//CPU time reader call - for random seeds
 
 		
-			cout<<"Attention: Phase shuffle"<<endl;
+			cout<<"Attention: Phase suffle"<<endl;
 
 		
 			cout<<"Importing Weights..."<<endl;
@@ -296,10 +296,9 @@ for (int q1=0;q1<Q;q1++)
 									for (int j=0;j<N;j++)
 									{
 										long d=rand(); 
-                                                                                //long seed3=d;
 										//long seed3= (long) 89*i+454*q1+j+t+q2*87+25*i*trials+50*i*d+4*q2*trials*234;
-										 //if(ran2(&seed3)<INSULT[q2])
-                                                                                if (d<INSULT[q2])
+							        		long seed3= (long) 4*t+t+i+5*d+6565*q2+98*q1+trials*46+1;	
+                                                                                if(ran2(&seed3)<INSULT[q2])
 										        {
 										        	
 										        	W[i][j]=0;
