@@ -25,5 +25,5 @@ data/
 Connectivity data (connectivity weights, tract lengths) used by the model are in the `connectivity` folder. Code for simulations and plotting is in the `code` folder. Additionally, the code folder includes python and bash scripts for compiling the C++ code to executable binaries, and submitting as a series of batch job to a compute grid. 
 
 
-The [figures notebook](https://github.com/Lefebvrelab/ActivityDependentMyelinationModel/blob/master/code/figures.ipynb) loads in the simulation results in the `sim_resuls` folder and produces plots, s shown in the figures of the paper. 
+The [figures notebook](https://github.com/Lefebvrelab/ActivityDependentMyelinationModel/blob/master/code/figures.ipynb) loads in the simulation results in the `sim_results` folder and produces plots shown in the figures of the paper. 
 
